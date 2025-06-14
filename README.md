@@ -21,11 +21,20 @@ Without this plugin, the workflow is painful:
    mode, which is often not straightforward, or reaching out for your mouse.
 3. You paste the hash into your command line.
 
-With this plugin, start typing your command, then press `^X^G` (Control-X
-Control-G). This will open an fzf window with your git history. If you need to
-add extra options to your git log, type them after your git command, then move
-the cursor left to them before pressing `^X^G`. The plugin will then remove
-then, and use them along with `git log`.
+With this plugin, the worfklow is keyboard-centric:
+
+1. Start typing your command, e.g. `git cherry-pick` or `git show`.
+2. Press `^X^G` (Control-X Control-G). This will open an fzf window with your git history.
+3. Select the commit you want to inject.
+
+### Using extra `git log` options or arguments
+
+Of course, this plugin relies on `git log` to get the list of commits to choose
+from. If you need to add extra options or arguments to the `git log` command,
+you can type them after your git command, then move the cursor left to them
+before pressing `^X^G`.
+The plugin will then remove the extra options and arguments, and use them along
+with `git log`.
 
 ```console
 git cherry-pick <your cursor is here>--all
@@ -40,7 +49,7 @@ several entries by pressing tab before pressing enter.
 
 ### Asciinema demo
 
-[![asciicast](https://asciinema.org/a/723241.svg)](https://asciinema.org/a/723241)
+[![asciicast demonstrating all the features](https://asciinema.org/a/723241.svg)](https://asciinema.org/a/723241)
 
 ## Installation
 
