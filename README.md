@@ -47,7 +47,6 @@ several entries by pressing tab before pressing enter.
 I have installed this as an Antidote plugin, other plugin managers may work, if
 not feel free to submit a PR.
 
-```
-# .zsh_plugins.txt
-greg0ire/inject-git-hash
+```console
+antidote install greg0ire/inject-git-hash
 ```
