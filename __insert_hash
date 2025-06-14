@@ -1,0 +1,11 @@
+__insert_hash () {
+	git log -n 50 --pretty=format:'%h %s' --no-merges $RBUFFER|\
+		fzf --reverse --multi --preview 'git show --color=always $(echo {} | cut -c -7)'|\
+		cut -c -7 |\
+		while read -r item; do
+		echo -n -E "${item} "
+	done
+	local ret=$?
+	echo
+	return $ret
+}
