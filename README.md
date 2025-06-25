@@ -47,6 +47,17 @@ window to allow you to select a commit.
 This is not a feature of this plugin, but `fzf` itself allows you to select
 several entries by pressing tab before pressing enter.
 
+### Changing the default key binding
+
+The default key binding is `^X^G` (Control-X Control-G). It mind conflict with
+terminal keybinds, for instance if you use warp, Control-G is bound to
+something already, and it "eats" the keypress before it reaches the plugin.
+
+```
+~/.zshrc
+export FZF_INJECT_GIT_WIDGET_KEY_BINDING="^X^X"
+```
+
 ### Asciinema demo
 
 [![asciicast demonstrating all the features](https://asciinema.org/a/723241.svg)](https://asciinema.org/a/723241)
